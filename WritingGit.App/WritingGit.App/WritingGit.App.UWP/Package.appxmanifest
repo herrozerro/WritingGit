@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="8cabbd9d-e0a9-4b32-a20b-b5b8227238b8"
-    Publisher="CN=91e1dfd2-1f4f-46ef-b596-8908f5e4904c"
+    Name="0d4b7ffe-738a-41b5-aa23-da085f3c5365"
+    Publisher="CN=d941f02b-357b-4221-96f9-922a898ad6cd"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>WritingGit.App.UWP</DisplayName>
-    <PublisherDisplayName>91e1dfd2-1f4f-46ef-b596-8908f5e4904c</PublisherDisplayName>
+    <PublisherDisplayName>d941f02b-357b-4221-96f9-922a898ad6cd</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -52,12 +52,4 @@
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
-  
-  <Extensions>
-    <Extension Category="windows.publisherCacheFolders">
-      <PublisherCacheFolders>
-        <Folder Name="Repos" />
-      </PublisherCacheFolders>
-    </Extension>
-  </Extensions>
 </Package>

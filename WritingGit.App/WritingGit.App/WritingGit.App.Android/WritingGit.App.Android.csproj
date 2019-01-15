@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1009999" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
@@ -93,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WritingGit.App\WritingGit.App.csproj">
-      <Project>{90DE3C80-BCB1-48D1-80C1-4F73D8E68841}</Project>
+      <Project>{F6FC89D2-76C5-40DF-ADFE-FD347192319B}</Project>
       <Name>WritingGit.App</Name>
     </ProjectReference>
   </ItemGroup>
