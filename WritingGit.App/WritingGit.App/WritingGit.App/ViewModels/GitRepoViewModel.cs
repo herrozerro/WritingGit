@@ -23,18 +23,26 @@ namespace WritingGit.App.ViewModels
         {
             Title = "Git Repos";
 
+            Items = new ObservableCollection<Item>();
             LoadGitRepo = new Command(async () => await LoadGitRepoFromUrl());
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            Commit = new Command(async () => await ExecuteCommit());
         }
 
         public ICommand LoadGitRepo { get; }
-        public Command LoadItemsCommand { get; set; }
+        public Command LoadItemsCommand { get; }
+        public Command Commit { get; }
 
         async Task LoadGitRepoFromUrl()
         {
+            var folder = Globals.storageFolder;
+
             if (!Directory.Exists(Models.Globals.storageFolder + "\\Repos\\" + Name))
             {
-                Repository.Clone("https://github.com/herrozerro/The-Disk-Setting.git", Models.Globals.storageFolder + "\\Repos\\" + Name);
+                var co = new CloneOptions();
+                co.CredentialsProvider = (_url, _user, _cred) => new UsernamePasswordCredentials { Username = "", Password = "" };
+                Repository.Clone(Repo, Models.Globals.storageFolder + "\\Repos\\" + Name, 
+                    co);
             }
 
             using (var repo = new Repository(Models.Globals.storageFolder + "\\Repos\\" + Name))
@@ -43,6 +51,15 @@ namespace WritingGit.App.ViewModels
                 {
                     Debug.WriteLine($"Date: {commit.Author.When}, Author: {commit.Author}, Message: {commit.Message}");
                 }
+            }
+        }
+
+        async Task ExecuteCommit()
+        {
+            using (var repo = new Repository(Models.Globals.storageFolder + "\\Repos\\" + Name))
+            {
+                Commands.Stage(repo, "README.md");
+                repo.Commit("TestCommit", repo.Commits.First().Author, repo.Commits.First().Author);
             }
         }
 

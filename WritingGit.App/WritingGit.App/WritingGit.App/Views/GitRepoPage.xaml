@@ -17,6 +17,8 @@
             <Label Text="Repo URL:"/>
             <Entry Text="{Binding Repo}" />
             <Button Text="Load Repo" Command="{Binding LoadGitRepo}"/>
+            <Button Text="Refresh List" Command="{Binding LoadItemsCommand}"/>
+            <Button Text="Commit" Command="{Binding Commit}"/>
             
             <ListView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
