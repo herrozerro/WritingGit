@@ -13,7 +13,6 @@ namespace WritingGit.App
         {
             InitializeComponent();
 
-
             MainPage = new MainPage();
         }
 

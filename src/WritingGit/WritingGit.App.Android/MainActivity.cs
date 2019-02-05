@@ -17,6 +17,8 @@ namespace WritingGit.App.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            WritingGit.App.Models.Globals.storageFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());

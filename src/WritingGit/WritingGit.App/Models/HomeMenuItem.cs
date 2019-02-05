@@ -6,6 +6,7 @@ namespace WritingGit.App.Models
 {
     public enum MenuItemType
     {
+        Landing,
         Browse,
         About,
         Git

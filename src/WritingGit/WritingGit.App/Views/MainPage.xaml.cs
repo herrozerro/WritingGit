@@ -17,7 +17,7 @@ namespace WritingGit.App.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.Landing, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -34,6 +34,9 @@ namespace WritingGit.App.Views
                         break;
                     case (int)MenuItemType.Git:
                         MenuPages.Add(id, new NavigationPage(new GitRepoPage()));
+                        break;
+                    case (int)MenuItemType.Landing:
+                        MenuPages.Add(id, new NavigationPage(new LandingPage()));
                         break;
                 }
             }

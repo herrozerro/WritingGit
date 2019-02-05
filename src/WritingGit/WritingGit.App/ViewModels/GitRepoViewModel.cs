@@ -41,8 +41,18 @@ namespace WritingGit.App.ViewModels
             {
                 var co = new CloneOptions();
                 co.CredentialsProvider = (_url, _user, _cred) => new UsernamePasswordCredentials { Username = "", Password = "" };
-                Repository.Clone(Repo, Models.Globals.storageFolder + "\\Repos\\" + Name, 
-                    co);
+                try
+                {
+                    Repository.Clone(Repo, 
+                        Models.Globals.storageFolder + "\\Repos\\" + Name,
+                        co);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    throw;
+                }
+
             }
 
             using (var repo = new Repository(Models.Globals.storageFolder + "\\Repos\\" + Name))
@@ -52,6 +62,8 @@ namespace WritingGit.App.ViewModels
                     Debug.WriteLine($"Date: {commit.Author.When}, Author: {commit.Author}, Message: {commit.Message}");
                 }
             }
+
+            await ExecuteLoadItemsCommand();
         }
 
         async Task ExecuteCommit()
@@ -96,7 +108,7 @@ namespace WritingGit.App.ViewModels
 
             foreach (var item in Directory.GetDirectories(Models.Globals.storageFolder + "\\Repos\\"))
             {
-                ls.Add(new Item { Id = i.ToString(), Text = item, Description = item});
+                ls.Add(new Item { Id = i.ToString(), Text = item, Description = item });
                 i++;
             }
 
