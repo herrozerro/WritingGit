@@ -14,6 +14,8 @@ namespace WritingGit.App
             InitializeComponent();
 
             MainPage = new MainPage();
+
+            var folder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         }
 
         protected override void OnStart()
