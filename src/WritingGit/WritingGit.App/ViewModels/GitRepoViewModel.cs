@@ -108,7 +108,8 @@ namespace WritingGit.App.ViewModels
 
             foreach (var item in Directory.GetDirectories(Models.Globals.storageFolder + "\\Repos\\"))
             {
-                ls.Add(new Item { Id = i.ToString(), Text = item, Description = item });
+                var concat = item.Replace(Globals.storageFolder + "\\Repos\\","");
+                ls.Add(new Item { Id = i.ToString(), Text = concat, Description = item });
                 i++;
             }
 

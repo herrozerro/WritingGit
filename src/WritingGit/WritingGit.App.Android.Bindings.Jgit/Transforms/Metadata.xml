@@ -1,0 +1,147 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.api']/*/method[@name='call' and count(parameter)=0]"
+    name="managedReturn">
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.gitrepo']/*/method[@name='call' and count(parameter)=0]"
+    name="managedReturn">
+    Java.Lang.Object
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.ketch']/*/method[@name='call' and count(parameter)=0]"
+    name="managedReturn">
+    Java.Lang.Object
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.dfs']/class[@name='InMemoryRepository.Builder']/method[@name='build' and count(parameter)=0]"
+    name="managedReturn">
+    Java.Lang.Object
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.file']/class[@name='PackIndex.EntriesIterator']/method[@name='next' and count(parameter)=0]"
+    name="managedReturn">
+    Java.Lang.Object
+  </attr>
+
+  <!--<attr
+    path="/api/package[@name='org.eclipse.jgit.merge']/class[@name='StrategyResolve']/method[@name='newMerger' and count(parameter)=2 and parameter[1][@type='org.eclipse.jgit.lib.ObjectInserter'] and parameter[2][@type='org.eclipse.jgit.lib.Config']]"
+    name="managedReturn">
+    Org.Eclipse.Jgit.Merge.Merger
+  </attr>-->
+    
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.file']/class[@name='BitmapIndexImpl']/method[@name='getBitmap' and count(parameter)=1 and parameter[1][@type='org.eclipse.jgit.lib.AnyObjectId']]"
+    name="managedReturn">
+    Org.Eclipse.Jgit.Lib.IBitmapIndexBitmap
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.file']/class[@name='BitmapIndexImpl']/method[@name='newBitmapBuilder' and count(parameter)=0]"
+    name="managedReturn">
+    Org.Eclipse.Jgit.Lib.IBitmapIndexBitmapBuilder
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.file']/class[@name='BitmapIndexImpl.CompressedBitmap']/method[@name='andNot' and count(parameter)=1 and parameter[1][@type='org.eclipse.jgit.lib.BitmapIndex.Bitmap']]"
+    name="managedReturn">
+    Org.Eclipse.Jgit.Lib.IBitmapIndexBitmap
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.file']/class[@name='BitmapIndexImpl.CompressedBitmap']/method[@name='or' and count(parameter)=1 and parameter[1][@type='org.eclipse.jgit.lib.BitmapIndex.Bitmap']]"
+    name="managedReturn">
+    Org.Eclipse.Jgit.Lib.IBitmapIndexBitmap
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.file']/class[@name='BitmapIndexImpl.CompressedBitmap']/method[@name='xor' and count(parameter)=1 and parameter[1][@type='org.eclipse.jgit.lib.BitmapIndex.Bitmap']]"
+    name="managedReturn">
+    Org.Eclipse.Jgit.Lib.IBitmapIndexBitmap
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.treewalk']/class[@name='CanonicalTreeParser']/method[@name='createSubtreeIterator' and count(parameter)=1 and parameter[1][@type='org.eclipse.jgit.lib.ObjectReader']]"
+    name="managedReturn">
+    Org.Eclipse.Jgit.Treewalk.AbstractTreeIterator
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.dfs']/class[@name='DfsObjDatabase']/method[@name='newReader' and count(parameter)=0]"
+    name="managedReturn">
+    Org.Eclipse.Jgit.Lib.ObjectReader
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.dfs']/class[@name='DfsInserter']/method[@name='newPackParser' and count(parameter)=1 and parameter[1][@type='java.io.InputStream']]"
+    name="managedReturn">
+    Org.Eclipse.Jgit.Transport.PackParser
+  </attr>
+
+
+
+  <attr
+      path="/api/package[@name='org.eclipse.jgit.internal.storage.dfs']/class[@name='DfsRepository']/method[@name='getObjectDatabase' and count(parameter)=0]"
+      name="managedReturn">
+    Org.Eclipse.Jgit.Lib.ObjectDatabase
+  </attr>
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.file']/class[@name='FileRepository']/method[@name='getConfig' and count(parameter)=0]"
+    name="managedReturn">
+    Org.Eclipse.Jgit.Lib.StoredConfig
+  </attr>
+
+  <attr
+      path="/api/package[@name='org.eclipse.jgit.internal.storage.file']/class[@name='FileRepository']/method[@name='getObjectDatabase' and count(parameter)=0]"
+      name="managedReturn">
+    Org.Eclipse.Jgit.Lib.ObjectDatabase
+  </attr>
+
+  <attr
+     path="/api/package[@name='org.eclipse.jgit.internal.storage.dfs']/class[@name='InMemoryRepository']/method[@name='getObjectDatabase' and count(parameter)=0]"
+      name="managedReturn">
+    Org.Eclipse.Jgit.Lib.ObjectDatabase
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.internal.storage.dfs']/*/method[@name='dispatch' and count(parameter)=1]/parameter[1]"
+    name="type">
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.events']/*/method[@name='dispatch' and count(parameter)=1]/parameter[1]"
+    name="type">
+    Java.Lang.Object
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.diff']/class[@name='HashedSequenceComparator']/method[@name='equals' and count(parameter)=4]/parameter[1]"
+    name="type">
+    Java.Lang.Object
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.diff']/class[@name='HashedSequenceComparator']/method[@name='equals' and count(parameter)=4]/parameter[3]"
+    name="type">
+    Java.Lang.Object
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.eclipse.jgit.diff']/class[@name='HashedSequenceComparator']/method[@name='hash' and count(parameter)=2 and parameter[1][@type='org.eclipse.jgit.diff.HashedSequence&lt;S&gt;'] and parameter[2][@type='int']]/parameter[1]"
+    name="type">
+    Java.Lang.Object
+  </attr>
+
+</metadata>
