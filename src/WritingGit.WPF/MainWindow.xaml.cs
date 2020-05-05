@@ -23,6 +23,11 @@ namespace WritingGit.WPF
         public MainWindow()
         {
             InitializeComponent();
+
+            var gs = new WritingGit.Core.Services.GitService();
+
+            gs.CloneRepository("https://github.com/herrozerro/WritingGit", "WritingGit2");
+            gs.GetRepositories();
         }
     }
 }
